@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import add from "./components/add";
+import sub from "./components/sub";
+import mul from "./components/mul";
+import divide from "./components/divide";
 
 function App() {
+  const list = {
+    backgroundColor: "red",
+    fontSize: "4rem",
+  };
+  const ul = {
+    backgroundColor: "yellow",
+    display: "grid",
+    justifyContent: "center",
+    alignContent: "center",
+    height: "100vh",
+    width: "100%",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <ul style={ul}>
+        <li style={list}> value of sum is {add(1, 2)}</li>
+        <li style={list}> value of subtraction is {sub(1, 2)}</li>
+        <li style={list}> value of mutliplication is {mul(1, 2)}</li>
+        <li style={list}> value of Divison is {divide(1, 2)}</li>
+      </ul>
     </div>
   );
 }
